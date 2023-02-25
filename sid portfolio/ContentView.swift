@@ -6,13 +6,13 @@
 //
 
 
-// MARK: made this in like 10 min lol enjoy
+// MARK: made this in like 20 min lol enjoy
 
 import SwiftUI
 
 struct ContentView: View {
     
-    let columns:[GridItem] = [GridItem.init(.flexible()), GridItem.init(.flexible()), GridItem.init(.flexible())]
+    let columns:[GridItem] = [GridItem.init(.flexible(), alignment: .top), GridItem.init(.flexible(), alignment: .top), GridItem.init(.flexible(), alignment: .top)]
     let width:Double = UIScreen.main.bounds.width
     
     var body: some View {
@@ -22,6 +22,8 @@ struct ContentView: View {
                 topBlock
                 descBlock
                 actionBlock
+                feedSegment
+                posts
             }
         }
         .accentColor(.white)
@@ -45,7 +47,8 @@ struct ContentView: View {
                     .imageScale(.small)
             }
         )
-        .padding()
+        .padding([.horizontal, .bottom])
+        .padding(.top, 10)
     }
     var topBlock: some View {
         HStack {
@@ -88,8 +91,8 @@ struct ContentView: View {
                 Text("iOS Engineer & Entrepreneur")
                     .font(.headline.weight(.regular))
                     .foregroundColor(Color("LightBlue"))
-                Text("✉️ sidneysadel@gmail.com")
                 Text("📞 +1 (215) 805 - 4512")
+                Text("✉️ sidneysadel@gmail.com")
                 HStack {
                     Image(systemName: "link")
                     Text("https://www.linkedin.com/in/sidneysadel/")
@@ -123,6 +126,40 @@ struct ContentView: View {
                 .cornerRadius(10)
         }
         .padding(.horizontal)
+    }
+    var feedSegment: some View {
+        LazyVGrid(columns: columns) {
+            Image(systemName: "square.grid.3x3")
+            
+            Image(systemName: "play.rectangle.on.rectangle.fill")
+            
+            Image(systemName: "tag.fill")
+            
+            Text("")
+            Text("")
+            RoundedRectangle(cornerRadius: 2)
+                .frame(height: 2)
+        }
+        .padding(.top, 10)
+        .padding(.bottom, -8)
+    }
+    var posts: some View {
+        LazyVGrid(columns: columns) {
+            Image("yikyak")
+                .resizable()
+                .scaledToFit()
+            Image("vanguard")
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(25)
+            Image("unieats")
+                .resizable()
+                .scaledToFit()
+            Text("**iOS Engineer**\n- 1 of 2 iOS engineers developing and releasing all updates to an app with 700K+ DAU\n- Worked closely with backend and product teams to plan scalable functionality\n- Developed entire features, such as notifications tab, (new) explore herds tab, and more")
+            Text("**NodeJS Developer**\n- Worked closely with product, QA, and client side teams to plan and produce scalable code\n- Contributed to BFF application codebase and created/maintained unit/e2e tests for all endpoints")
+            Text("**Founder, iOS Engineer**\n- Programmed and designed restaurant listing app and website (ueats.io)\n -Configured backend databases and managed integrations within the application\n -Created targeted marketing campaigns and recruited team of ambassadors to help promote")
+        }
+        .font(.caption)
     }
 }
 
