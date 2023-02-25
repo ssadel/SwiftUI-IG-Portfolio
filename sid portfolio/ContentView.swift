@@ -24,6 +24,10 @@ struct ContentView: View {
                 actionBlock
                 feedSegment
                 posts
+                Text("https://github.com/ssadel/SwiftUI-IG-Portfolio")
+                    .font(.caption2)
+                    .padding(.top, 10)
+                    .accentColor(.gray)
             }
         }
         .accentColor(.white)
