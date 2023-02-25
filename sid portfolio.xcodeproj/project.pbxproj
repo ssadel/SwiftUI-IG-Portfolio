@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C265249B29A9CBA00065F227 /* sid_portfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265249A29A9CBA00065F227 /* sid_portfolioApp.swift */; };
-		C265249D29A9CBA00065F227 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265249C29A9CBA00065F227 /* ContentView.swift */; };
+		C265249D29A9CBA00065F227 /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265249C29A9CBA00065F227 /* InstagramView.swift */; };
 		C265249F29A9CBA10065F227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C265249E29A9CBA10065F227 /* Assets.xcassets */; };
 		C26524A229A9CBA10065F227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26524A129A9CBA10065F227 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		C265249729A9CBA00065F227 /* sid portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sid portfolio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C265249A29A9CBA00065F227 /* sid_portfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sid_portfolioApp.swift; sourceTree = "<group>"; };
-		C265249C29A9CBA00065F227 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C265249C29A9CBA00065F227 /* InstagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
 		C265249E29A9CBA10065F227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C26524A129A9CBA10065F227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				C265249A29A9CBA00065F227 /* sid_portfolioApp.swift */,
-				C265249C29A9CBA00065F227 /* ContentView.swift */,
+				C265249C29A9CBA00065F227 /* InstagramView.swift */,
 				C265249E29A9CBA10065F227 /* Assets.xcassets */,
 				C26524A029A9CBA10065F227 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C265249D29A9CBA00065F227 /* ContentView.swift in Sources */,
+				C265249D29A9CBA00065F227 /* InstagramView.swift in Sources */,
 				C265249B29A9CBA00065F227 /* sid_portfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

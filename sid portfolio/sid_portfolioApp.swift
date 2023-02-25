@@ -11,7 +11,7 @@ import SwiftUI
 struct sid_portfolioApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InstagramView()
                 .preferredColorScheme(.dark)
         }
     }

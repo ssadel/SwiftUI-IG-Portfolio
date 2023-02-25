@@ -10,7 +10,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct InstagramView: View {
     
     let columns:[GridItem] = [GridItem.init(.flexible(), spacing: 4, alignment: .top), GridItem.init(.flexible(), spacing: 4, alignment: .top), GridItem.init(.flexible(), spacing: 4, alignment: .top)]
     let width:Double = UIScreen.main.bounds.width
@@ -51,8 +51,8 @@ struct ContentView: View {
                     .imageScale(.small)
             }
         )
-        .padding([.horizontal, .bottom])
-        .padding(.top, 10)
+        .padding(.horizontal)
+        .padding(.vertical, 10)
     }
     var topBlock: some View {
         HStack {
@@ -76,11 +76,11 @@ struct ContentView: View {
                     .font(.subheadline)
                 Text("Languages")
                     .font(.subheadline)
-                Text("Startups")
+                Text("References")
                     .font(.subheadline)
             }
             .font(.headline)
-            .frame(width: width/1.61)
+            .frame(width: width/1.6)
             Spacer()
         }
         .padding(.horizontal)
@@ -92,14 +92,14 @@ struct ContentView: View {
                 Text("Sidney (Sid) Sadel")
                     .padding(.top, 5)
                     .font(.headline)
-                Text("iOS Engineer & Entrepreneur")
+                Text("Self-Taught iOS Engineer & Entrepreneur")
                     .font(.headline.weight(.regular))
                     .foregroundColor(Color("LightBlue"))
-                Text("📞 +1 (215) 805 - 4512")
-                Text("✉️ sidneysadel@gmail.com")
+                Text("☎️ +1 (215) 805 - 4512")
+                Text("📧 sidneysadel@gmail.com")
                 HStack {
                     Image(systemName: "link")
-                    Text("https://www.linkedin.com/in/sidneysadel/")
+                    Text("https://dot.cards/sadel")
                         .accentColor(Color("LightBlue"))
                 }
                 .foregroundColor(Color("LightBlue"))
@@ -116,7 +116,7 @@ struct ContentView: View {
                 .frame(width: width/2.5, height: 34)
                 .background(.blue)
                 .cornerRadius(10)
-            Text("Message")
+            Text("Contact")
                 .font(.headline)
                 .frame(width: width/2.5, height: 34)
                 .background(.gray.opacity(0.25))
@@ -134,8 +134,10 @@ struct ContentView: View {
     var feedSegment: some View {
         LazyVGrid(columns: columns) {
             Image(systemName: "square.grid.3x3")
+                .foregroundColor(.gray)
             
             Image(systemName: "play.rectangle.on.rectangle.fill")
+                .foregroundColor(.gray)
             
             Image(systemName: "tag.fill")
             
@@ -144,7 +146,7 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 2)
                 .frame(height: 2)
         }
-        .padding(.top, 10)
+        .padding(.top, 4)
         .padding(.bottom, -8)
     }
     var posts: some View {
@@ -152,16 +154,37 @@ struct ContentView: View {
             Image("yikyak")
                 .resizable()
                 .scaledToFit()
+                .overlay(
+                    Text("Yik Yak")
+                        .font(.subheadline.weight(.bold))
+                        .shadow(radius: 4)
+                        .padding(.leading, 12)
+                    , alignment: .bottomLeading
+                )
             Image("vanguard")
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(25)
-            Image("unieats")
+                .overlay(
+                    Text("Vanguard")
+                        .foregroundColor(.black)
+                        .font(.subheadline.weight(.bold))
+                    , alignment: .bottom
+                )
+            Image("bebigger")
                 .resizable()
                 .scaledToFit()
-            Text("**iOS Engineer**\n- 1 of 2 iOS engineers developing and releasing all updates to an app with 700K+ DAU\n- Worked closely with backend and product teams to plan scalable functionality\n- Developed entire features, such as notifications tab, (new) explore herds tab, and more")
+                .cornerRadius(25)
+                .overlay(
+                    Text("BeBigger")
+                        .foregroundColor(.black)
+                        .font(.subheadline.weight(.bold))
+                        .padding(.trailing, 12)
+                    , alignment: .bottomTrailing
+                )
+            Text("**Lead iOS Engineer**\n- 1 of 2 iOS engineers developing and releasing all updates to an app with 700K+ DAU\n- Worked closely with backend and product teams to plan scalable functionality\n- Developed entire features, such as notifications tab, (new) explore herds tab, and more")
             Text("**NodeJS Developer**\n- Worked closely with product, QA, and client side teams to plan and produce scalable code\n- Contributed to BFF application codebase and created/maintained unit/e2e tests for all endpoints")
-            Text("**Founder, iOS Engineer**\n- Programmed and designed restaurant listing app and website (ueats.io)\n -Configured backend databases and managed integrations within the application\n -Created targeted marketing campaigns and recruited team of ambassadors to help promote")
+            Text("**Founder, iOS Engineer**\n- A project I developed on the side in ~3 weeks to prove a concept, BeBigger is “BeReal for gym rats”\n- 700+ downloads in less than a month, 100+ DAU currently")
         }
         .font(.caption)
     }
@@ -169,7 +192,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        InstagramView()
             .preferredColorScheme(.dark)
     }
 }
