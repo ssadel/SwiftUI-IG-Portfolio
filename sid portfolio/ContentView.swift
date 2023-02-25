@@ -12,7 +12,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let columns:[GridItem] = [GridItem.init(.flexible(), alignment: .top), GridItem.init(.flexible(), alignment: .top), GridItem.init(.flexible(), alignment: .top)]
+    let columns:[GridItem] = [GridItem.init(.flexible(), spacing: 4, alignment: .top), GridItem.init(.flexible(), spacing: 4, alignment: .top), GridItem.init(.flexible(), spacing: 4, alignment: .top)]
     let width:Double = UIScreen.main.bounds.width
     
     var body: some View {
