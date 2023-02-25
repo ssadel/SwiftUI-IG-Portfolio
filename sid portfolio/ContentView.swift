@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             header
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 topBlock
                 descBlock
                 actionBlock
@@ -69,18 +69,18 @@ struct ContentView: View {
                 )
             Spacer()
             LazyVGrid(columns: self.columns) {
-                Text("1")
-                Text("5M")
-                Text("25")
-                Text("Posts")
+                Text("6")
+                Text("8")
+                Text("2")
+                Text("Years")
                     .font(.subheadline)
-                Text("Followers")
+                Text("Languages")
                     .font(.subheadline)
-                Text("Following")
+                Text("Startups")
                     .font(.subheadline)
             }
             .font(.headline)
-            .frame(width: width/1.7)
+            .frame(width: width/1.61)
             Spacer()
         }
         .padding(.horizontal)
